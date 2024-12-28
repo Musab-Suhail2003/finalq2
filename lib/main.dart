@@ -47,7 +47,7 @@ class WeeklyExpenseChart extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {},
-                  child: const Text('View Report'),
+                  child: const Text('View Report', style: TextStyle(color: Colors.black),),
                 ),
               ],
             ),
@@ -79,25 +79,22 @@ class WeeklyExpenseChart extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
-              height: 200,
-              child: Center()
-            ),
+            
             const SizedBox(height: 20),
             Row(
               children: [Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),), Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),)],
             ),
             // Legend
-            Row(children: [ _buildLegendItem('Grocery', '\$758.20', Colors.purple.shade200),
+            Row(children: [ buildLegendItem('Grocery', '\$758.20', Colors.purple.shade200),
             Spacer(),
-            _buildLegendItem('Food & Drink', '\$758.20', Colors.green.shade100),
+            buildLegendItem('Food & Drink', '\$758.20', Colors.green.shade100),
             ],),
             Row(
               children: [Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),), Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),)],
 
             ),
-            Row(children: [_buildLegendItem('Shopping', '\$758.20', Colors.red.shade100),
-            Spacer(),_buildLegendItem('Transportation', '\$758.20', Colors.orange.shade100),
+            Row(children: [buildLegendItem('Shopping', '\$758.20', Colors.red.shade100),
+            Spacer(),buildLegendItem('Transportation', '\$758.20', Colors.orange.shade100),
           ],)
             ],
         ),
@@ -105,7 +102,7 @@ class WeeklyExpenseChart extends StatelessWidget {
     );
   }
 
-  Widget _buildLegendItem(String title, String amount, Color color) {
+  Widget buildLegendItem(String title, String amount, Color color) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),
       child: Column(
@@ -148,7 +145,7 @@ class WeeklyExpenseChart extends StatelessWidget {
   }
 
   Widget Circle (int radius) {
-    final color_list = {
+    final Map<int, Color> color_list = {
       48: Colors.purple.shade200,
        32: Colors.green.shade100,
         13: Colors.red.shade100,
@@ -158,7 +155,7 @@ class WeeklyExpenseChart extends StatelessWidget {
       width: radius * 5,
       height: radius * 5,
       decoration: BoxDecoration(
-        color: color_list[radius],
+        color: color_list[radius]!.withOpacity(0.5),
         shape: BoxShape.circle,
       ),
       child: Center(child: Text("$radius", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: color_list[radius]),)),

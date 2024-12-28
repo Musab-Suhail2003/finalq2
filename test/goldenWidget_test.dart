@@ -5,16 +5,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:sample_q2/main.dart';
 
 void main() {
-  testWidgets('Golden test for ProductScreen', (WidgetTester tester) async {
-    // Set the screen size
-    tester.binding.window.physicalSizeTestValue = const Size(339, 512);
-    tester.binding.window.devicePixelRatioTestValue = 1.0;
+  testWidgets('Golden test for WeeklyExpenseChart', (WidgetTester tester) async {
 
     // Build the widget
     await tester.pumpWidget(
       MaterialApp(
         debugShowCheckedModeBanner: false,
-        theme: ThemeData.dark(),
         home: const WeeklyExpenseChart(),
       ),
     );
@@ -28,7 +24,10 @@ void main() {
       matchesGoldenFile('goldens/ui_sc.png'),
     );
 
-    // Reset the screen size
-    addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
+    // Verify bookmark icon is present
+    expect(find.byWidget(WeeklyExpenseChart().Circle(48)), findsOneWidget);
+    expect(find.byWidget(WeeklyExpenseChart().buildLegendItem('Grocery', '\$758.20', Colors.purple.shade200)), findsOneWidget);
+
+    
   });
 }
