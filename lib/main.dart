@@ -1,5 +1,19 @@
-import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: WeeklyExpenseChart(),
+    );
+  }
+}
 
 class WeeklyExpenseChart extends StatelessWidget {
   const WeeklyExpenseChart({Key? key}) : super(key: key);
@@ -10,21 +24,28 @@ class WeeklyExpenseChart extends StatelessWidget {
       elevation: 4,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(26.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
+                
                 const Text(
                   'Weekly Expense',
                   style: TextStyle(
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
+                    color: Colors.black,
                   ),
                 ),
-                TextButton(
+                ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(0),
+                    ),
+                  ),
                   onPressed: () {},
                   child: const Text('View Report'),
                 ),
@@ -38,64 +59,47 @@ class WeeklyExpenseChart extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
+            Stack(
+              children: [
+                Circle(48),
+                Positioned(
+                  top: 48,
+                  left: 48,
+                  child: Circle(32),
+                ),
+                Positioned(
+                  top: 48,
+                  right: 48,
+                  child: Circle(13),
+                ),
+                Positioned(
+                  top: 93,
+                  left: 93,
+                  child: Circle(7),
+                ),
+              ],
+            ),
             SizedBox(
               height: 200,
-              child: PieChart(
-                PieChartData(
-                  sections: [
-                    PieChartSectionData(
-                      value: 48,
-                      title: '48%',
-                      color: Colors.purple.shade200,
-                      radius: 60,
-                      titleStyle: const TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    PieChartSectionData(
-                      value: 32,
-                      title: '32%',
-                      color: Colors.green.shade100,
-                      radius: 60,
-                      titleStyle: const TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    PieChartSectionData(
-                      value: 13,
-                      title: '13%',
-                      color: Colors.red.shade100,
-                      radius: 60,
-                      titleStyle: const TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    PieChartSectionData(
-                      value: 7,
-                      title: '7%',
-                      color: Colors.orange.shade100,
-                      radius: 60,
-                      titleStyle: const TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                  sectionsSpace: 0,
-                  centerSpaceRadius: 0,
-                ),
-              ),
+              child: Center()
             ),
             const SizedBox(height: 20),
+            Row(
+              children: [Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),), Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),)],
+            ),
             // Legend
-            _buildLegendItem('Grocery', '\$758.20', Colors.purple.shade200),
+            Row(children: [ _buildLegendItem('Grocery', '\$758.20', Colors.purple.shade200),
+            Spacer(),
             _buildLegendItem('Food & Drink', '\$758.20', Colors.green.shade100),
-            _buildLegendItem('Shopping', '\$758.20', Colors.red.shade100),
-            _buildLegendItem('Transportation', '\$758.20', Colors.orange.shade100),
-          ],
+            ],),
+            Row(
+              children: [Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),), Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),),Text("-", style: TextStyle(fontSize: 30, color: Colors.grey.shade500),)],
+
+            ),
+            Row(children: [_buildLegendItem('Shopping', '\$758.20', Colors.red.shade100),
+            Spacer(),_buildLegendItem('Transportation', '\$758.20', Colors.orange.shade100),
+          ],)
+            ],
         ),
       ),
     );
@@ -104,9 +108,11 @@ class WeeklyExpenseChart extends StatelessWidget {
   Widget _buildLegendItem(String title, String amount, Color color) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 4.0),
-      child: Row(
+      child: Column(
         children: [
-          Container(
+          Row(
+            children: [
+              Container(
             width: 12,
             height: 12,
             decoration: BoxDecoration(
@@ -114,7 +120,7 @@ class WeeklyExpenseChart extends StatelessWidget {
               shape: BoxShape.circle,
             ),
           ),
-          const SizedBox(width: 8),
+          SizedBox(width: 15,),
           Text(
             title,
             style: TextStyle(
@@ -124,15 +130,38 @@ class WeeklyExpenseChart extends StatelessWidget {
                      Colors.orange,
             ),
           ),
-          const Spacer(),
-          Text(
+            ],
+          ),
+          
+          Row(children: [
+            SizedBox(width: 27,),
+            Text(
             amount,
             style: const TextStyle(
               fontWeight: FontWeight.bold,
             ),
           ),
+          ],)
         ],
       ),
+    );
+  }
+
+  Widget Circle (int radius) {
+    final color_list = {
+      48: Colors.purple.shade200,
+       32: Colors.green.shade100,
+        13: Colors.red.shade100,
+         7: Colors.orange.shade100
+    };
+    return Container(
+      width: radius * 5,
+      height: radius * 5,
+      decoration: BoxDecoration(
+        color: color_list[radius],
+        shape: BoxShape.circle,
+      ),
+      child: Center(child: Text("$radius", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15, color: color_list[radius]),)),
     );
   }
 }

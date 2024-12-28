@@ -15,7 +15,7 @@ void main() {
       MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData.dark(),
-        home: const ProductScreen(),
+        home: const WeeklyExpenseChart(),
       ),
     );
 
@@ -24,36 +24,11 @@ void main() {
 
     // Compare with golden file
     await expectLater(
-      find.byType(ProductCard),
+      find.byType(WeeklyExpenseChart),
       matchesGoldenFile('goldens/ui_sc.png'),
     );
 
     // Reset the screen size
     addTearDown(tester.binding.window.clearPhysicalSizeTestValue);
-  });
-
-  testWidgets('Product card contains all required elements', (WidgetTester tester) async {
-    await tester.pumpWidget(
-      MaterialApp(
-        theme: ThemeData.dark(),
-        home: Scaffold(
-          body: Center(
-            child: ProductCard(),
-          ),
-        ),
-      ),
-    );
-
-    // Verify text elements
-    expect(find.text('AirPods Max — Silver'), findsOneWidget);
-    expect(find.text('A\$899.00'), findsOneWidget);
-    expect(find.text('Free Engraving'), findsOneWidget);
-
-    // Verify bookmark icon is present
-    expect(find.byIcon(Icons.bookmark_border), findsOneWidget);
-
-    // Verify button with bookmark icon is present
-    expect(find.widgetWithIcon(IconButton, Icons.bookmark_border), findsOneWidget);
-    
   });
 }
